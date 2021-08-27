@@ -76,3 +76,54 @@ header nav ul li a {
 }
 
 /* <Header> ENDS */
+
+#about-me, #my-work, #contact-me {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#about-me, #my-work, #contact-me {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* <footer> Style Start */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: var(--primary-color);
+    width: 100%;
+    padding: 40px 35px;
+}
+
+footer h2 {
+    color: var(--tertiary-color);
+    font-size: 30px;
+    margin: auto 0;
+}
+
+footer div {
+    line-height: 1;
+    text-align: right;
+}
+
+footer p {
+    color: var(--tertiary-color);
+}
+
+
+/* <footer> Style End */
+
+@media screen and (max-width: 980px) {
+    footer h2,
+    footer div {
+        text-align: center;
+        width: 100%;
+    }
+
+    footer div {
+        padding-top: 10px;
+    }
+}
