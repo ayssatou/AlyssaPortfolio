@@ -31,7 +31,7 @@ body {
         its children.*/
 
 header {
-    padding: 10px 35px 10px 0px;
+    padding: 10px 50px 10px 0px;
     background-color: var(--primary-color);
     display: flex;
     justify-content: space-between;
@@ -48,44 +48,84 @@ header h1 {
     background-color: var(--tertiary-color);
 }
 
-
-header nav {
-    margin: 7px 0;
-}
-
-header nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-}
-
-header nav ul li {
-    display: inline;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    border-bottom: 3px solid;
-    padding: 5px 15px;
-    margin: auto 5px;
-    font-weight: lighter;
-    font-size: 1.20vw;
-    color: var(--tertiary-color);
+header nav ul li a:hover {
+    color: var(--body-color);
 }
 
 /* <Header> ENDS */
 
-#about-me, #my-work, #contact-me {
-    display: flex;
-    flex-wrap: wrap;
+/* <Nav> STARTS */
+
+nav {
+    margin: 7px 0;
 }
 
-#about-me, #my-work, #contact-me {
+nav ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
 }
+
+nav ul li {
+}
+
+nav ul li a {
+    text-decoration: none;
+    border-bottom: 3px solid;
+    padding: 5px 15px;
+    margin: auto 5px;
+    font-size: 2vw;
+    color: var(--tertiary-color);
+}
+
+
+/* <Nav> ENDS */
+
+section {
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    flex-direction: row ;
+    align-items: flex-start;
+    padding: 25px 6%;
+}
+
+section .content {
+    padding: 10px 25px;
+    color: var(--secondary-color);
+    border-left: 2px solid;
+    width: 78%;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+section .content p {
+    margin: 5px 0 15px 0;
+    
+}
+
+
+section h2 {
+    width: 15%;
+    text-align: right;
+    color: var(--secondary-color);
+    font-size: 2.4vw;
+    line-height: 1.2;
+    font-weight: 800;
+    padding-right: 15px;
+}
+
+section nav ul li a {
+    color: var(--secondary-color);
+    font-size: 1.7vw;
+}
+
+section nav ul li a {
+    padding: 5px 20px;
+}
+
 
 /* <footer> Style Start */
 
@@ -117,6 +157,43 @@ footer p {
 /* <footer> Style End */
 
 @media screen and (max-width: 980px) {
+
+    header {
+        padding: 10px 0 10px 0;
+        justify-content: center;
+        position: relative;
+    }
+    header h1 {
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+    header nav ul li a {
+        font-size: 2.5vw;
+    }
+
+
+    section nav ul {
+        display:inline;
+    }
+
+    section nav ul li a {
+        font-size: 16px;
+        line-height: 1.8;
+        border-bottom: 0;
+    }
+
+    section nav ul li a::before {
+        content: "➤ ";
+    }
+
+
+    /* <footer> Style Start */
+
     footer h2,
     footer div {
         text-align: center;
@@ -125,5 +202,34 @@ footer p {
 
     footer div {
         padding-top: 10px;
+    }
+
+    /* <footer> Style End */
+}
+
+@media screen and (max-width: 575px) {
+    section {
+        flex-direction: column ;
+    }
+    section .content {
+        width: 100%;
+        border-top: 2px solid;
+        border-left: 0;
+    }
+
+    section h2 {
+        width: 100%;
+        text-align: center;
+        color: var(--secondary-color);
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 800;
+        padding-bottom: 10px;
+    }
+
+
+    header nav ul li a {
+        padding: 5px;
+        font-size: 2.8vw;
     }
 }
