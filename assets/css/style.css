@@ -3,7 +3,7 @@
   --primary-color: #31343d;
   --secondary-color: #435877;
   --tertiary-color: #92ccce;
-  --body-color: #eeeef6;
+  --body-color: #e8e8f8;
 }
 
 /* Variables End*/
@@ -18,7 +18,7 @@
 }
 
 body {
-  color: var(--body-color);
+  background-color: var(--body-color);
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -80,6 +80,46 @@ nav ul li a {
 }
 
 /* <Nav> ENDS */
+
+/* reusable classes STARTS */
+
+.floating-box {
+    background-color: var(--tertiary-color);
+  z-index: 9999;
+  position: absolute;
+  padding: 7px;
+  color: var(--primary-color);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 18px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* reusable classes ENDS */
+
+/* Hero */
+
+#hero {
+    position: relative;
+  padding-top: 20%;
+  width: 100%;
+}
+
+#hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #hero h2 {
+      width: auto;
+    bottom: 25px;
+    right: 50px;
+  }
+
+/* Hero ends */
 
 /* Content STARTS (Main Content)
         The content is the sections, articles and everything
@@ -149,14 +189,8 @@ section nav ul li a {
 }
 
 .work-project div {
-  background-color: var(--tertiary-color);
-  z-index: 9999;
-  position: absolute;
   bottom: 15px;
   left: 0;
-  padding: 7px;
-  color: var(--primary-color);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 18px 0 rgba(0, 0, 0, 0.19);
 }
 .work-project div h3 {
   font-size: 25px;
@@ -201,6 +235,7 @@ footer h2 {
 footer div {
   line-height: 1;
   text-align: right;
+  color: var(--body-color);
 }
 
 footer p {
@@ -286,6 +321,10 @@ footer p {
 
   /* <Header> small sized screen adjustments ENDS*/
 
+  #hero h2{
+      right: 0;
+      left: 0;
+  }
   /* Content small sized screen adjustments STARTS*/
   section {
     flex-direction: column;
