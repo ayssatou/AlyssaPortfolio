@@ -47,6 +47,8 @@ header h1 {
   background-color: var(--tertiary-color);
 }
 
+/* <Header> pseudo-classes */
+
 header nav ul li a:hover {
   color: var(--body-color);
 }
@@ -208,6 +210,19 @@ section nav ul li a {
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Content pseudo-classes */
+
+.work-project:hover img{
+    opacity: 0.5;
+}
+.work-project:hover .floating-box{
+    background-color: var(--body-color);
+}
+
+section nav ul li a:hover {
+    opacity: 0.75;
 }
 
 /* Content ENDS*/
